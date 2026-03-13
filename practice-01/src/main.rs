@@ -2,19 +2,32 @@
 #[derive(Debug, PartialEq)]
 pub struct Point2D {
     x: i32,
-    y: i32
+    y: i32,
 }
 
-// pub fn new(x: i32, y: i32) -> Point2D { }
+pub fn new(x: i32, y: i32) -> Point2D {
+    Point2D { x, y }
+}
 
-/*
+pub fn print_point(p: &Point2D) {
+    println!("from print_point {:?}", p)
+}
+
 pub fn problem1() {
     let p1 = new(1, 2);
-    let p2 = p1;
+    let p2 = &p1;
     println!("p1={:?}", p1);
     println!("p2={:?}", p2);
 }
-*/
+
+pub fn is_zero(p: &Point2D) -> bool {
+    if p.x == 0 && p.y == 0 {
+        return true;
+    }
+    return false;
+}
+
+pub fn move_new(p: &Point2D, x: i32, y: i32) -> Point2D {}
 
 /*
 pub fn problem2() {
@@ -27,15 +40,16 @@ pub fn problem2() {
 
 fn main() {
     println!("Hello, world!");
-    //let p = new(1, 2);
-    //println!("point: {:?}", p);
+    let p = new(1, 2);
+    println!("point: {:?}", p);
+    print_point(&p);
+    print_point(&p);
 }
 
 #[cfg(test)]
 mod tests {
     use crate::*;
 
-    /*
     #[test]
     fn test_is_zero() {
         let p1 = new(1, 2);
@@ -44,9 +58,7 @@ mod tests {
         let p2 = new(0, 0);
         assert_eq!(is_zero(&p2), true);
     }
-    */
 
-    /*
     #[test]
     fn test_move_new() {
         let p1 = new(1, 2);
@@ -54,7 +66,6 @@ mod tests {
         assert_eq!(p2, new(-1, 5));
         assert_eq!(p1, new(1, 2));
     }
-    */
 
     /*
     #[test]

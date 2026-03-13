@@ -110,7 +110,7 @@ The return value should be `true` if both coordinates of the point are
 In `main.rs`, there also exists a test for `is_zero`. You can now uncomment
 the test and use `cargo test` to check whether the test is running.
 
-## Exercise 5
+## Exercise 5 -- I am here
 
 Write a function `move_new` that takes a point `p`, an `x`-value, and a
 `y`-value. The function then returns a new point that represents
